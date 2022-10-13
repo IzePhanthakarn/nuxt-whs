@@ -44,14 +44,14 @@
     --pink: #ff2d54;
     --brown: #a2855e;
     --bg: #e5e5e5;
-    --gray: #8e8e93;
-    --gray2: #aeaeb2;
+    /* --gray: #8e8e93; */
+    /* --gray2: #aeaeb2; */
     --gray3: #c7c7cc;
     --gray4: #d1d1d6;
     --gray5: #e5e5ea;
     --gray6: #f2f2f7;
-    --gray7: #2f2f2f;
-    --gray8: #0f0f0f;
+    --gray: #2f2f2f;
+    --gray2: #0f0f0f;
     --gray9: #191919;
 }
 
@@ -71,28 +71,22 @@
     --pink: #ff375f;
     --brown: #ac8f68;
     --bg: #1f1f1f;
-    --gray: #8e8e93;
-    --gray2: #636366;
+    /* --gray: #8e8e93; */
+    /* --gray2: #636366; */
     --gray3: #48484a;
     --gray4: #3a3a3c;
     --gray5: #2c2c2e;
     --gray6: #1c1c1e;
-    --gray7: #0f0f0f;
-    --gray8: #2f2f2f;
+    --gray: #0f0f0f;
+    --gray2: #2f2f2f;
     --gray9: #3f3f3f;
 }
 
-.bg-gray8 {
-    background: var(--gray8);
+.bg-gray2 {
+    background: var(--gray2);
 }
-.bg-gray6 {
-    background: var(--gray6);
-}
-.bg-gray3{
-    background: var(--gray3);
-}
-.bg-form{
-    background: var(--gray7);
+.bg-gray{
+    background: var(--gray);
 }
 .bg-main {
     background: var(--bg);
@@ -100,8 +94,11 @@
 .text-white {
     color: #f5f5f7;
 }
-.text-highlight{
+.text-green{
     color: var(--green);
+}
+.bg-green{
+    background: var(--green);
 }
 .text-default{
     color: var(--default);

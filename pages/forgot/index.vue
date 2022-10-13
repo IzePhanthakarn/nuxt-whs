@@ -1,5 +1,5 @@
 <template>
-    <form class="flex flex-col justify-between bg-form text-white px-10 pt-10 pb-10 rounded-xl drop-shadow-2xl">
+    <form class="flex flex-col justify-between bg-gray text-white px-10 pt-10 pb-10 rounded-xl drop-shadow-2xl">
         <div class="w-full">
             <h1 class="text-4xl font-semibold">Forgot Password</h1>
             <hr class="my-3">
@@ -14,10 +14,10 @@
         </div>
         <div class="w-full">
             <nuxt-link to="forgot/next">
-            <button class="login-button w-full my-3 py-2 bg-gray8 rounded-xl text-lg font-medium drop-shadow-xl cursor-pointer">NEXT</button>    
+            <button class="login-button w-full my-3 py-2 bg-gray2 rounded-xl text-lg font-medium drop-shadow-xl cursor-pointer">NEXT</button>    
             </nuxt-link>
-            <p class="mx-auto text-center">Back to <nuxt-link to="/login" class="text-highlight underline underline-offset-2">
-                    Login!</nuxt-link> or <nuxt-link to="/register" class="text-highlight underline underline-offset-2">
+            <p class="mx-auto text-center">Back to <nuxt-link to="/login" class="text-green underline underline-offset-2">
+                    Login!</nuxt-link> or <nuxt-link to="/register" class="text-green underline underline-offset-2">
                     Create an account!</nuxt-link>
             </p>
         </div>

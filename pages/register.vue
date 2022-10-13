@@ -1,5 +1,5 @@
 <template>
-    <form class="w-auto flex flex-col bg-form text-white px-10 pt-10 pb-10 rounded-xl drop-shadow-2xl">
+    <form class="w-auto flex flex-col bg-gray text-white px-10 pt-10 pb-10 rounded-xl drop-shadow-2xl">
         <h1 class="text-4xl font-semibold">Create Account</h1>
         <hr class="my-3">
         <div class="grid grid-cols-12 gap-2">
@@ -34,10 +34,10 @@
             </div>
         </div>
         <button type="submit"
-            class="login-button w-full mt-8 mb-3 py-2 bg-gray8 rounded-xl text-lg font-medium drop-shadow-xl">SIGN
+            class="login-button w-full mt-8 mb-3 py-2 bg-gray2 rounded-xl text-lg font-medium drop-shadow-xl">SIGN
             UP</button>
         <p class="mx-auto">Aleady have an account? <nuxt-link to="/login"
-                class="text-highlight underline underline-offset-2">
+                class="text-green underline underline-offset-2">
                 Login!</nuxt-link>
         </p>
     </form>

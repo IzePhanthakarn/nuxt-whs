@@ -18,7 +18,7 @@
                 </div>
 
                 <!-- Search box -->
-                <div class="w-1/2 text-default font-semibold">
+                <div class="w-1/2 text-black font-semibold">
                     <form class="form w-full">
                         <button class="flex items-center space-x-3">
                             <base-icon icon="magnifying-glass"></base-icon>
@@ -52,6 +52,7 @@
                 </div>
             </div>
         </nav>
+
         <div class="w-full mt-16 flex text-white">
             <div class="sidebar flex flex-col justify-between" :class="{'active':is_open}">
                 <ul :class="{'mt-3':is_open}" v-if="role == 'admin'|| role=='superadmin'">
@@ -169,7 +170,7 @@ export default {
 
 <style scoped>
 .nav {
-    background: var(--gray7);
+    background: var(--gray);
     z-index: 99;
 }
 
@@ -178,18 +179,18 @@ export default {
 }
 
 .list-ul:hover {
-    background: var(--gray8);
+    background: var(--gray2);
 }
 
 .sidebar {
     min-height: calc(100vh - 64px);
     width: 72px;
-    background: var(--gray7);
-    transition: all .4s;
+    background: var(--gray);
+    transition: width .4s;
 }
 
 .sidebar.active {
-    width: 240px;
+    width: 290px;
 }
 
 .menu-list {
@@ -197,20 +198,16 @@ export default {
 }
 
 .menu-list:hover {
-    background: var(--gray8);
+    background: var(--gray2);
 }
 
 .menu-list.highlight {
-    background: var(--gray8);
+    background: var(--gray2);
 }
 
 .menu-list.active {
     height: 76px;
 }
-
-/* From uiverse.io by @satyamchaudharydev */
-/* From uiverse.io by @satyamchaudharydev */
-/* removing default style of button */
 
 .form button {
     border: none;
@@ -220,26 +217,17 @@ export default {
 
 /* styling of whole input container */
 .form {
-    --timing: 0.3s;
-    --width-of-input: 200px;
-    --height-of-input: 40px;
-    --border-height: 2px;
-    --input-bg: #fff;
-    --border-color: #2f2ee9;
-    --border-radius: 30px;
-    --after-border-radius: 2px;
     position: relative;
     width: 100%;
-    height: var(--height-of-input);
+    height: 40px;
     display: flex;
     align-items: center;
     padding-inline: 0.8em;
-    border-radius: var(--border-radius);
+    border-radius: 30px;
     transition: border-radius 0.5s ease;
-    background: var(--input-bg, #fff);
+    background: #fff;
 }
 
-/* styling of Input */
 .input {
     font-size: 0.9rem;
     background-color: transparent;
@@ -250,7 +238,6 @@ export default {
     border: none;
 }
 
-/* styling of animated border */
 .form:before {
     content: "";
     position: absolute;
@@ -258,23 +245,21 @@ export default {
     transform: scaleX(0);
     transform-origin: center;
     width: 100%;
-    height: var(--border-height);
+    height: 2px;
     left: 0;
     bottom: 0;
     border-radius: 1px;
-    transition: transform var(--timing) ease;
+    transition: transform 0.3s ease;
 }
 
-/* Hover on Input */
 .form:focus-within {
-    border-radius: var(--after-border-radius);
+    border-radius: 2px;
 }
 
 input:focus {
     outline: none;
 }
 
-/* here is code of animated border */
 .form:focus-within:before {
     transform: scale(1);
 }
