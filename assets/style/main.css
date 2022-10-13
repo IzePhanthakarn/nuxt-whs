@@ -44,10 +44,11 @@
     --pink: #ff2d54;
     --brown: #a2855e;
     --bg: #e5e5e5;
-    /* --gray: #8e8e93; */
-    /* --gray2: #aeaeb2; */
-    --gray3: #c7c7cc;
-    --gray4: #d1d1d6;
+    --gray8: #8e8e93;
+    --gray7: #aeaeb2;
+    /* --gray4: #c7c7cc; */
+    --gray4: #2f2f2f;
+    --gray3: #d1d1d6;
     --gray5: #e5e5ea;
     --gray6: #f2f2f7;
     --gray: #2f2f2f;
@@ -71,17 +72,26 @@
     --pink: #ff375f;
     --brown: #ac8f68;
     --bg: #1f1f1f;
-    /* --gray: #8e8e93; */
-    /* --gray2: #636366; */
-    --gray3: #48484a;
-    --gray4: #3a3a3c;
+    --gray8: #8e8e93;
+    --gray7: #636366;
+    --gray4: #555555;
+    /* --gray4: #48484a; */
+    --gray3: #3a3a3c;
     --gray5: #2c2c2e;
     --gray6: #1c1c1e;
     --gray: #0f0f0f;
     --gray2: #2f2f2f;
     --gray9: #3f3f3f;
 }
-
+.bg-gray5{
+    background: #2f2f2f;
+}
+.bg-gray4{
+    background: var(--gray4);
+}
+.bg-gray3{
+    background: var(--gray3);
+}
 .bg-gray2 {
     background: var(--gray2);
 }
@@ -94,20 +104,25 @@
 .text-white {
     color: #f5f5f7;
 }
-.text-green{
-    color: var(--green);
+.text-primary{
+    color: var(--pink);
 }
-.bg-green{
-    background: var(--green);
+.bg-primary{
+    background: var(--pink);
 }
 .text-default{
     color: var(--default);
 }
 
+h-1-10{
+    height: 10%;
+}
+h-9-10{
+    height: 90%;
+}
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 html {
@@ -116,7 +131,6 @@ html {
 
 body {
     font-family: 'Baloo 2', cursive;
-    color: var(--default);
-    /* transition: all .2s; */
+    /* color: var(--default); */
     overflow-x: hidden;
 }

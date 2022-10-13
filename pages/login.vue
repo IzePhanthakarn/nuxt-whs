@@ -9,7 +9,7 @@
         <nuxt-link to="/forgot" class="mt-2 underline underline-offset-2">Forgor Password?</nuxt-link>
         <button type="submit"
             class="login-button w-full my-3 py-2 bg-gray2 rounded-xl text-lg font-medium drop-shadow-xl">LOGIN</button>
-        <p class="mx-auto">Not Registred? <nuxt-link to="/register" class="text-green underline underline-offset-2">
+        <p class="mx-auto">Not Registred? <nuxt-link to="/register" class="text-primary underline underline-offset-2">
                 Create an account!</nuxt-link>
         </p>
     </form>

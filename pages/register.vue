@@ -37,7 +37,7 @@
             class="login-button w-full mt-8 mb-3 py-2 bg-gray2 rounded-xl text-lg font-medium drop-shadow-xl">SIGN
             UP</button>
         <p class="mx-auto">Aleady have an account? <nuxt-link to="/login"
-                class="text-green underline underline-offset-2">
+                class="text-primary underline underline-offset-2">
                 Login!</nuxt-link>
         </p>
     </form>

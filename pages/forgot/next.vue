@@ -19,8 +19,8 @@
                 <button class="login-button w-full my-3 py-2 bg-gray2 rounded-xl text-lg font-medium drop-shadow-xl">
                     RESET</button>
             </div>
-            <p class="mx-auto text-center">Back to <nuxt-link to="/login" class="text-green underline underline-offset-2">
-                    Login!</nuxt-link> or <nuxt-link to="/register" class="text-green underline underline-offset-2">
+            <p class="mx-auto text-center">Back to <nuxt-link to="/login" class="text-primary underline underline-offset-2">
+                    Login!</nuxt-link> or <nuxt-link to="/register" class="text-primary underline underline-offset-2">
                     Create an account!</nuxt-link>
             </p>
         </div>

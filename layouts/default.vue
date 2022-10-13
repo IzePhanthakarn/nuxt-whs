@@ -64,10 +64,10 @@
                         </nuxt-link>
                     </li>
                     <li>
-                        <nuxt-link to="/storage" class="menu-list flex items-center rounded-xl m-1 cursor-pointer"
-                            :class="{'flex-col justify-center active':!is_open,'highlight': route_name == 'storage'}">
-                            <base-icon icon="estate" size="24" :class="{'ml-5':is_open}"></base-icon>
-                            <p class="mt-1 text-xs font-medium" :class="{'ml-5 text-base':is_open}">Storage</p>
+                        <nuxt-link to="/garage" class="menu-list flex items-center rounded-xl m-1 cursor-pointer"
+                            :class="{'flex-col justify-center active':!is_open,'highlight': route_name == 'garage'}">
+                            <base-icon icon="warehouse" size="24" :class="{'ml-5':is_open}"></base-icon>
+                            <p class="mt-1 text-xs font-medium" :class="{'ml-5 text-base':is_open}">Garage</p>
                         </nuxt-link>
                     </li>
                     <li>
@@ -101,17 +101,17 @@
                 </ul>
                 <ul :class="{'mt-3':is_open}" v-if="role == 'user'">
                     <li>
-                        <nuxt-link to="/storage" class="menu-list flex items-center rounded-xl m-1 cursor-pointer"
-                            :class="{'flex-col justify-center active':!is_open,'highlight': route_name == 'storage'}">
-                            <base-icon icon="estate" size="24" :class="{'ml-5':is_open}"></base-icon>
-                            <p class="mt-1 text-xs font-medium" :class="{'ml-5 text-base':is_open}">Storage</p>
+                        <nuxt-link to="/garage" class="menu-list flex items-center rounded-xl m-1 cursor-pointer"
+                            :class="{'flex-col justify-center active':!is_open,'highlight': route_name == 'garage'}">
+                            <base-icon icon="warehouse" size="24" :class="{'ml-5':is_open}"></base-icon>
+                            <p class="mt-1 text-xs font-medium" :class="{'ml-5 text-base':is_open}">Garage</p>
                         </nuxt-link>
                     </li>
                     <li>
-                        <nuxt-link to="/inventory" class="menu-list flex items-center rounded-xl m-1 cursor-pointer"
-                            :class="{'flex-col justify-center active':!is_open,'highlight': route_name == 'inventory'}">
-                            <base-icon icon="inbox" size="24" :class="{'ml-5':is_open}"></base-icon>
-                            <p class="mt-1 text-xs font-medium" :class="{'ml-5 text-base':is_open}">Inventory</p>
+                        <nuxt-link to="/my-cars" class="menu-list flex items-center rounded-xl m-1 cursor-pointer"
+                            :class="{'flex-col justify-center active':!is_open,'highlight': route_name == 'my-cars'}">
+                            <base-icon icon="directions-car" size="24" :class="{'ml-5':is_open}"></base-icon>
+                            <p class="mt-1 text-xs font-medium" :class="{'ml-5 text-base':is_open}">My Cars</p>
                         </nuxt-link>
                     </li>
                     <li>
@@ -142,7 +142,7 @@
                     </li>
                 </ul>
             </div>
-            <nuxt />
+            <nuxt class="content w-full py-8 px-24" :class="{'px-12':is_open}" />
         </div>
     </div>
 </template>
@@ -152,7 +152,7 @@ export default {
     data() {
         return {
             is_open: false,
-            role: "user"
+            role: "superadmin"
         }
     },
     methods: {
@@ -209,6 +209,11 @@ export default {
     height: 76px;
 }
 
+.content {
+    height: calc(100vh - 64px);
+    transition: all .4s;
+}
+
 .form button {
     border: none;
     background: none;
@@ -241,7 +246,7 @@ export default {
 .form:before {
     content: "";
     position: absolute;
-    background: var(--green);
+    background: var(--pink);
     transform: scaleX(0);
     transform-origin: center;
     width: 100%;
@@ -284,7 +289,8 @@ input:not(:placeholder-shown)~.reset {
     width: 17px;
     margin-top: 3px;
 }
-.vertical-line{
+
+.vertical-line {
     width: 100%;
     height: 1px;
     margin: 12px 0px;
