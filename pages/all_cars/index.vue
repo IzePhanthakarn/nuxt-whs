@@ -113,18 +113,9 @@
                         <h2>Brand: BMW</h2>
                         <h3>Type: Sport Car</h3>
                         <h4>Price: {{price("17959000")}} Baht</h4>
-                        <h5>Rent: {{price("2000")}} Baht / day</h5>
-                        <div class="w-full flex justify-between items-center">
-                            <h2>Rating:</h2>
-                            <div class="flex items-center space-x-1">
-                                <base-icon icon="star" size="12" class="text-primary"></base-icon>
-                                <base-icon icon="star" size="12" class="text-primary"></base-icon>
-                                <base-icon icon="star" size="12" class="text-primary"></base-icon>
-                                <base-icon icon="star" size="12" class="text-primary"></base-icon>
-                                <base-icon icon="star-half" size="12" class="text-primary"></base-icon>
-                                (12)
-                            </div>
-                        </div>
+                        <h5>Seller: <span class="highlight">Phanthakarn Khumphai</span></h5>
+                        <h6 v-if="showroom != null">Showroom: <span class="highlight">Showroom's name</span></h6>
+                        <h6 v-if="showroom == null">Province: Bangkok</h6>
                         <div class="w-full mt-3 flex justify-between">
                             <div class="flex items-center space-x-1">
                                 <base-icon icon="visibility" size="24" class="text-primary"></base-icon>
@@ -145,7 +136,8 @@
 export default {
     data() {
         return {
-            header: "All Cars"
+            header: "All Cars",
+            showroom: null
         }
     },
     methods: {
@@ -214,5 +206,11 @@ select::-ms-expand {
 
 .select:hover::after {
     color: var(--pink);
+}
+
+.highlight:hover {
+    color: var(--pink);
+    text-decoration: underline;
+    text-underline-offset: 2px;
 }
 </style>

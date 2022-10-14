@@ -7,49 +7,49 @@
         <div class="w-full grid grid-cols-5 gap-5 mt-5">
 
             <!-- Server Used -->
-            <div class="bg-gray3 py-4 rounded-xl flex items-center justify-evenly">
+            <nuxt-link to="/dashboard" class="border-card bg-gray3 py-4 rounded-xl flex items-center justify-evenly">
                 <base-icon icon="server" size="70"></base-icon>
                 <div class="flex flex-col text-center">
                     <p class="text-xl font-semibold">134 MB</p>
                     <p class="text-base font-semibold">Server Used</p>
                 </div>
-            </div>
+            </nuxt-link>
 
             <!-- Total Cars -->
-            <div class="bg-gray3 py-4 rounded-xl flex items-center justify-evenly">
+            <nuxt-link to="/all_cars" class="border-card cursor-pointer bg-gray3 py-4 rounded-xl flex items-center justify-evenly">
                 <base-icon icon="car-sideview" size="80"></base-icon>
                 <div class="flex flex-col text-center">
                     <p class="text-xl font-semibold">7 Cars</p>
                     <p class="text-base font-semibold">Total Cars</p>
                 </div>
-            </div>
+            </nuxt-link>
 
             <!-- Total Showrooms -->
-            <div class="bg-gray3 py-4 rounded-xl flex items-center justify-evenly">
+            <nuxt-link to="/showroom" class="border-card cursor-pointer bg-gray3 py-4 rounded-xl flex items-center justify-evenly">
                 <base-icon icon="garage" size="70"></base-icon>
                 <div class="flex flex-col text-center">
                     <p class="text-xl font-semibold">4 Showrooms</p>
                     <p class="text-base font-semibold">Total Showrooms</p>
                 </div>
-            </div>
+            </nuxt-link>
 
             <!-- Total User -->
-            <div class="bg-gray3 py-4 rounded-xl flex items-center justify-evenly">
+            <nuxt-link to="/user" class="border-card cursor-pointer bg-gray3 py-4 rounded-xl flex items-center justify-evenly">
                 <base-icon icon="user-square" size="70"></base-icon>
                 <div class="flex flex-col text-center">
                     <p class="text-xl font-semibold">34 Accounts</p>
                     <p class="text-base font-semibold">Total User</p>
                 </div>
-            </div>
+            </nuxt-link>
 
             <!-- Total User -->
-            <div class="bg-gray3 py-4 rounded-xl flex items-center justify-evenly">
+            <nuxt-link to="/review" class="border-card cursor-pointer bg-gray3 py-4 rounded-xl flex items-center justify-evenly">
                 <base-icon icon="thumbs-updown" size="60"></base-icon>
                 <div class="flex flex-col text-center">
                     <p class="text-xl font-semibold">4.5 / 5</p>
                     <p class="text-base font-semibold">Total Reviews</p>
                 </div>
-            </div>
+            </nuxt-link>
         </div>
 
         <div class="w-full overflow-y-auto grid grid-cols-2 gap-5 mt-5 rounded-lg">
@@ -188,6 +188,19 @@ export default {
 </script>
 
 <style scoped>
+.border-card{
+    border: solid 2px var(--gray3);
+}
+.border-card:hover{
+    border: solid 2px var(--pink);
+    transition: all .3s;
+}
+.border-card svg{
+    transition: all .3s;
+}
+.border-card:hover svg{
+    color: red;
+}
 .border-table {
     border: solid 2px var(--pink);
 }

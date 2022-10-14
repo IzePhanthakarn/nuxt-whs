@@ -99,10 +99,10 @@
                         </nuxt-link>
                     </li>
                     <li v-if="role == 'superadmin'">
-                        <nuxt-link to="/role" class="menu-list flex items-center rounded-xl m-1 cursor-pointer"
-                            :class="{'flex-col justify-center active':!is_open,'highlight': route_name == 'role'}">
-                            <base-icon icon="book" size="24" :class="{'ml-5':is_open}"></base-icon>
-                            <p class="mt-1 text-xs font-medium" :class="{'ml-5 text-base':is_open}">Role</p>
+                        <nuxt-link to="/review" class="menu-list flex items-center rounded-xl m-1 cursor-pointer"
+                            :class="{'flex-col justify-center active':!is_open,'highlight': route_name == 'review'}">
+                            <base-icon icon="thumbs-updown" size="24" :class="{'ml-5':is_open}"></base-icon>
+                            <p class="mt-1 text-xs font-medium" :class="{'ml-5 text-base':is_open}">Review</p>
                         </nuxt-link>
                     </li>
                 </ul>
@@ -140,10 +140,10 @@
                     <li class="flex items-center rounded-xl m-1" :class="{'flex-col justify-center active':!is_open}">
                         <base-icon icon="account" size="24" v-show="!is_open"></base-icon>
                         <base-icon icon="account" size="32" class="ml-4" v-show="is_open"></base-icon>
-                        <p class="mt-1 text-xs font-medium" :class="{'hidden':is_open}">Admin</p>
+                        <p class="mt-1 text-xs font-medium capitalize" :class="{'hidden':is_open}">{{role}}</p>
                         <div class="block ml-3" :class="{'hidden':!is_open}">
-                            <p class="text-base font-medium">Admin</p>
-                            <p class="text-base">admin@whs.com</p>
+                            <p class="text-base font-medium capitalize">{{role}}</p>
+                            <p class="text-base">{{email}}</p>
                         </div>
                     </li>
                     <div class="vertical-line"></div>
@@ -166,7 +166,8 @@ export default {
     data() {
         return {
             is_open: false,
-            role: "superadmin"
+            role: "superadmin",
+            email: "admin@whs.com"
         }
     },
     methods: {

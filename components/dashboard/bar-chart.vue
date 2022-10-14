@@ -11,9 +11,9 @@ export default {
     return {
       series: [
         {
-          name: 'series-1',
+          name: 'Total views',
           data: [30, 40, 35, 50, 49, 60, 70, 91, 76, 65]
-        }
+        },
 
       ],
       chartOptions: {
