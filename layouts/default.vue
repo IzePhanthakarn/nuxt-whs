@@ -64,23 +64,30 @@
                         </nuxt-link>
                     </li>
                     <li>
-                        <nuxt-link to="/garage" class="menu-list flex items-center rounded-xl m-1 cursor-pointer"
-                            :class="{'flex-col justify-center active':!is_open,'highlight': route_name == 'garage'}">
-                            <base-icon icon="warehouse" size="24" :class="{'ml-5':is_open}"></base-icon>
-                            <p class="mt-1 text-xs font-medium" :class="{'ml-5 text-base':is_open}">Garage</p>
+                        <nuxt-link to="/all_cars" class="menu-list flex items-center rounded-xl m-1 cursor-pointer"
+                            :class="{'flex-col justify-center active':!is_open,'highlight': route_name == 'all_cars'}">
+                            <base-icon icon="car-sideview" size="24" :class="{'ml-5':is_open}"></base-icon>
+                            <p class="mt-1 text-xs font-medium" :class="{'ml-5 text-base':is_open}">All Cars</p>
                         </nuxt-link>
                     </li>
                     <li>
-                        <nuxt-link to="/update" class="menu-list flex items-center rounded-xl m-1 cursor-pointer"
-                            :class="{'flex-col justify-center active':!is_open,'highlight': route_name == 'update'}">
-                            <base-icon icon="pen-to-square" size="24" :class="{'ml-5':is_open}"></base-icon>
-                            <p class="mt-1 text-xs font-medium" :class="{'ml-5 text-base':is_open}">Update</p>
+                        <nuxt-link to="/showroom" class="menu-list flex items-center rounded-xl m-1 cursor-pointer"
+                            :class="{'flex-col justify-center active':!is_open,'highlight': route_name == 'showroom'}">
+                            <base-icon icon="garage" size="24" :class="{'ml-5':is_open}"></base-icon>
+                            <p class="mt-1 text-xs font-medium" :class="{'ml-5 text-base':is_open}">Showroom</p>
                         </nuxt-link>
                     </li>
                     <li>
-                        <nuxt-link to="/adminhistory" class="menu-list flex items-center rounded-xl m-1 cursor-pointer"
-                            :class="{'flex-col justify-center active':!is_open,'highlight': route_name == 'adminhistory'}">
-                            <base-icon icon="exchange-alt" size="24" :class="{'ml-5':is_open}"></base-icon>
+                        <nuxt-link to="/dealing" class="menu-list flex items-center rounded-xl m-1 cursor-pointer"
+                            :class="{'flex-col justify-center active':!is_open,'highlight': route_name == 'dealing'}">
+                            <base-icon icon="handshake" size="24" :class="{'ml-5':is_open}"></base-icon>
+                            <p class="mt-1 text-xs font-medium" :class="{'ml-5 text-base':is_open}">Dealing</p>
+                        </nuxt-link>
+                    </li>
+                    <li>
+                        <nuxt-link to="/history" class="menu-list flex items-center rounded-xl m-1 cursor-pointer"
+                            :class="{'flex-col justify-center active':!is_open,'highlight': route_name == 'history'}">
+                            <base-icon icon="clock-rotate-left" size="24" :class="{'ml-5':is_open}"></base-icon>
                             <p class="mt-1 text-xs font-medium" :class="{'ml-5 text-base':is_open}">History</p>
                         </nuxt-link>
                     </li>
@@ -101,17 +108,24 @@
                 </ul>
                 <ul :class="{'mt-3':is_open}" v-if="role == 'user'">
                     <li>
+                        <nuxt-link to="/all_cars" class="menu-list flex items-center rounded-xl m-1 cursor-pointer"
+                            :class="{'flex-col justify-center active':!is_open,'highlight': route_name == 'all_cars'}">
+                            <base-icon icon="car-sideview" size="24" :class="{'ml-5':is_open}"></base-icon>
+                            <p class="mt-1 text-xs font-medium" :class="{'ml-5 text-base':is_open}">All Cars</p>
+                        </nuxt-link>
+                    </li>
+                    <li>
                         <nuxt-link to="/garage" class="menu-list flex items-center rounded-xl m-1 cursor-pointer"
                             :class="{'flex-col justify-center active':!is_open,'highlight': route_name == 'garage'}">
-                            <base-icon icon="warehouse" size="24" :class="{'ml-5':is_open}"></base-icon>
+                            <base-icon icon="directions-car" size="24" :class="{'ml-5':is_open}"></base-icon>
                             <p class="mt-1 text-xs font-medium" :class="{'ml-5 text-base':is_open}">Garage</p>
                         </nuxt-link>
                     </li>
                     <li>
-                        <nuxt-link to="/my-cars" class="menu-list flex items-center rounded-xl m-1 cursor-pointer"
-                            :class="{'flex-col justify-center active':!is_open,'highlight': route_name == 'my-cars'}">
-                            <base-icon icon="directions-car" size="24" :class="{'ml-5':is_open}"></base-icon>
-                            <p class="mt-1 text-xs font-medium" :class="{'ml-5 text-base':is_open}">My Cars</p>
+                        <nuxt-link to="/dealing" class="menu-list flex items-center rounded-xl m-1 cursor-pointer"
+                            :class="{'flex-col justify-center active':!is_open,'highlight': route_name == 'dealing'}">
+                            <base-icon icon="handshake" size="24" :class="{'ml-5':is_open}"></base-icon>
+                            <p class="mt-1 text-xs font-medium" :class="{'ml-5 text-base':is_open}">Dealing</p>
                         </nuxt-link>
                     </li>
                     <li>
