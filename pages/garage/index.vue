@@ -108,11 +108,11 @@
                 </div>
                 <div class="w-full mt-5 grid grid-cols-3 gap-5 text-white">
                     <div class="bg-gray5 rounded-lg p-4" v-for="i in 30" :key="i">
-                        <img src="img/products/iphone-14-pro.jpeg" alt="" class="rounded-xl">
-                        <h1 class="mt-2 text-xl font-medium">iPhone 14 Pro</h1>
+                        <img src="img/cars/BMW-M8.jpg" alt="" class="rounded-xl">
+                        <h1 class="mt-2 text-xl font-medium">BMW M8</h1>
                         <h2>Brand : BMW</h2>
                         <h3>Type : Sport Car</h3>
-                        <h4>Price : {{price("3000000")}} Baht</h4>
+                        <h4>Price : {{price("17959000")}} Baht</h4>
                         <h5>Rent : {{price("2000")}} Baht / day</h5>
                         <div class="w-full flex justify-between items-center">
                             <h2>Rating :</h2>
