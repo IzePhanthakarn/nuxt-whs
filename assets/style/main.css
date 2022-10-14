@@ -110,10 +110,23 @@
 .bg-primary{
     background: var(--pink);
 }
+.bg-success{
+    background: var(--green);
+}
+.bg-close{
+    background: #ff8a4c;
+}
 .text-default{
     color: var(--default);
 }
-
+.card {
+    border: solid 2px var(--gray5);
+    transition: all .3s;
+    cursor: pointer;
+}
+.card:hover {
+    border: solid 2px var(--pink);
+}
 h-1-10{
     height: 10%;
 }
@@ -123,6 +136,7 @@ h-9-10{
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html {

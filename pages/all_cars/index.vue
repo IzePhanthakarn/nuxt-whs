@@ -52,7 +52,7 @@
             <!-- Content -->
             <div class="col-span-3 bg-gray3 p-5 rounded-xl">
                 <div class="w-full h-10 flex space-x-3">
-                    <div v-show="header == 'All cars'"
+                    <div v-show="header == 'All Cars'"
                         class="w-10 h-10 bg-gray rounded-full flex items-center justify-center">
                         <base-icon class="text-white" icon="car-sideview" size="36"></base-icon>
                     </div>
@@ -73,7 +73,7 @@
                         <img src="img/logo/Honda.png" alt="" class="w-9">
                     </div>
 
-                    <h1 class="text-3xl font-medium">{{header}}</h1>
+                    <h1 class="text-3xl font-semibold">{{header}}</h1>
                 </div>
                 <hr class="border-gray-400 mb-4 mt-3">
                 <div class="w-full flex justify-end space-x-4">
@@ -107,15 +107,15 @@
                     </div>
                 </div>
                 <div class="w-full mt-5 grid grid-cols-3 gap-5 text-white">
-                    <div class="bg-gray5 rounded-lg p-4" v-for="i in 30" :key="i">
+                    <div class="card bg-gray5 rounded-lg p-4" v-for="i in 30" :key="i">
                         <img src="img/cars/BMW-M8.jpg" alt="" class="rounded-xl">
                         <h1 class="mt-2 text-xl font-medium">BMW M8</h1>
-                        <h2>Brand : BMW</h2>
-                        <h3>Type : Sport Car</h3>
-                        <h4>Price : {{price("17959000")}} Baht</h4>
-                        <h5>Rent : {{price("2000")}} Baht / day</h5>
+                        <h2>Brand: BMW</h2>
+                        <h3>Type: Sport Car</h3>
+                        <h4>Price: {{price("17959000")}} Baht</h4>
+                        <h5>Rent: {{price("2000")}} Baht / day</h5>
                         <div class="w-full flex justify-between items-center">
-                            <h2>Rating :</h2>
+                            <h2>Rating:</h2>
                             <div class="flex items-center space-x-1">
                                 <base-icon icon="star" size="12" class="text-primary"></base-icon>
                                 <base-icon icon="star" size="12" class="text-primary"></base-icon>
@@ -130,7 +130,7 @@
                                 <base-icon icon="visibility" size="24" class="text-primary"></base-icon>
                                 <p>10.7 K</p>
                             </div>
-                            <button>
+                            <button class="duration-200 hover:scale-110">
                                 <base-icon icon="heart-regular" size="28" class="text-primary"></base-icon>
                             </button>
                         </div>
