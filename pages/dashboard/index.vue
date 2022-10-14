@@ -28,7 +28,7 @@
             <div class="bg-gray3 py-4 rounded-xl flex items-center justify-evenly">
                 <base-icon icon="garage" size="70"></base-icon>
                 <div class="flex flex-col text-center">
-                    <p class="text-xl font-semibold">7 Showrooms</p>
+                    <p class="text-xl font-semibold">4 Showrooms</p>
                     <p class="text-base font-semibold">Total Showrooms</p>
                 </div>
             </div>
@@ -46,16 +46,93 @@
             <div class="bg-gray3 py-4 rounded-xl flex items-center justify-evenly">
                 <base-icon icon="thumbs-updown" size="60"></base-icon>
                 <div class="flex flex-col text-center">
-                    <p class="text-xl font-semibold">4.5 / 5 </p>
+                    <p class="text-xl font-semibold">4.5 / 5</p>
                     <p class="text-base font-semibold">Total Reviews</p>
                 </div>
             </div>
         </div>
 
-        <div class="w-full h-full grid grid-cols-4 gap-5 mt-5">
+        <div class="w-full overflow-y-auto grid grid-cols-2 gap-5 mt-5 rounded-lg">
+            <div class="col-span-2 w-full h-full bg-gray3 p-4 rounded-lg">
+                <div class="w-full flex items-center space-x-2">
+                    <base-icon icon="copyright" size="30"></base-icon>
+                    <h1 class="text-2xl font-semibold">Most Popular Brand</h1>
+                </div>
+                <barChart class="mt-2 text-black" />
+            </div>
+            <div class="bg-gray3 p-4 rounded-xl flex flex-col justify-around">
+                <div class="w-full flex items-center space-x-2">
+                    <base-icon icon="webhook" size="30"></base-icon>
+                    <h1 class="text-2xl font-semibold">Best Seller Brand</h1>
+                </div>
+                <pieChart class="mt-2" />
+            </div>
+            <div class="bg-gray3 p-4 rounded-xl flex flex-col">
+                <div class="w-full flex items-center space-x-2">
+                    <base-icon icon="visibility" size="26"></base-icon>
+                    <h1 class="text-2xl font-semibold">Last Viewed Cars</h1>
+                </div>
+                <div class="w-full h-full mt-2 rounded-2xl">
+                    <div class="h-96 border-table overflow-y-hidden rounded-2xl">
+                        <table class="styled-table text-white font-semibold">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Showroom</th>
+                                    <th>Latest View</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>BMW M8</td>
+                                    <td>Suphanburi</td>
+                                    <td>5 Oct 2022 13:30</td>
+                                </tr>
+                                <tr>
+                                    <td>BMW M8</td>
+                                    <td>Suphanburi</td>
+                                    <td>5 Oct 2022 13:30</td>
+                                </tr>
+                                <tr>
+                                    <td>BMW M8</td>
+                                    <td>Suphanburi</td>
+                                    <td>5 Oct 2022 13:30</td>
+                                </tr>
+                                <tr>
+                                    <td>BMW M8</td>
+                                    <td>Suphanburi</td>
+                                    <td>5 Oct 2022 13:30</td>
+                                </tr>
+                                <tr>
+                                    <td>BMW M8</td>
+                                    <td>Suphanburi</td>
+                                    <td>5 Oct 2022 13:30</td>
+                                </tr>
+                                <tr>
+                                    <td>BMW M8</td>
+                                    <td>Suphanburi</td>
+                                    <td>5 Oct 2022 13:30</td>
+                                </tr>
+                                <tr>
+                                    <td>BMW M8</td>
+                                    <td>Suphanburi</td>
+                                    <td>5 Oct 2022 13:30</td>
+                                </tr>
+                                <tr>
+                                    <td>BMW M8</td>
+                                    <td>Suphanburi</td>
+                                    <td>5 Oct 2022 13:30</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="w-full h-full grid grid-cols-4 gap-5 mt-5">
             <div class="col-span-2 h-full flex flex-col justify-center space-y-5">
 
-                <!-- Most Popular Car -->
+                Most Popular Car
                 <div class="bg-gray3 h-full p-4 rounded-xl flex flex-col">
                     <div class="w-full flex items-center space-x-2">
                         <base-icon icon="webhook" size="30"></base-icon>
@@ -76,17 +153,19 @@
                     </div>
                 </div>
 
-                <!-- Most Popular Brand -->
+                Most Popular Brand
                 <div class="bg-gray3 h-full p-4 rounded-xl flex flex-col">
                     <div class="w-full flex items-center space-x-2">
                         <base-icon icon="copyright" size="30"></base-icon>
                         <h1 class="text-2xl font-semibold">Most Popular Brand</h1>
                     </div>
-                    <div class="w-full h-full mt-2 bg-gray4"></div>
+                    <div class="w-full h-full mt-2">
+                        <barChart class="h-full bg-gray4"/>
+                    </div>
                 </div>
             </div>
 
-            <!-- Most Brand Views -->
+            Most Brand Views
             <div class="col-span-2 h-full bg-gray3 p-3 rounded-xl flex flex-col">
                 <div class="w-full flex items-center space-x-2">
                     <base-icon icon="visibility" size="26"></base-icon>
@@ -94,6 +173,77 @@
                 </div>
                 <div class="mt-4 ml-4 w-80 h-80 bg-gray rounded-full"></div>
             </div>
-        </div>
+        </div> -->
     </div>
 </template>
+
+<script>
+import barChart from "~/components/dashboard/bar-chart.vue";
+import pieChart from "~/components/dashboard/pie-chart.vue";
+export default {
+    components: {
+        barChart, pieChart
+    }
+}
+</script>
+
+<style scoped>
+.border-table {
+    border: solid 2px var(--pink);
+}
+
+.styled-table {
+    border-collapse: collapse;
+    font-size: 0.9em;
+    width: 100%;
+    table-layout: auto;
+    background: var(--pink);
+}
+
+tbody {
+    display: block;
+    width: 100%;
+    overflow-y: auto;
+    height: 336px;
+    border-radius: 1rem;
+}
+
+thead tr {
+    display: block;
+}
+
+th,td {
+    width: 275px;
+}
+.styled-table thead tr {
+    background-color: var(--pink);
+    color: #f5f5f7;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 16px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #f5f5f7;
+}
+
+.styled-table tbody tr:nth-of-type(odd) {
+    background-color: #f5f5f7;
+    color: var(--pink);
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background: var(--gray3);
+    color: var(--default);
+}
+
+th {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+</style>
