@@ -86,6 +86,7 @@ tbody {
     overflow-y: auto;
     height: 100%;
     border-radius: .8rem;
+    background: #e5e5ea;
 }
 
 thead tr {
