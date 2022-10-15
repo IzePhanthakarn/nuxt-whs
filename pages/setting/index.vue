@@ -93,7 +93,6 @@ export default {
     data() {
         return {
             header: "Account",
-            ize: ""
         }
     },
     mounted() {
