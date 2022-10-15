@@ -1,6 +1,6 @@
 <template>
     <div class="w-full">
-        <label class="label text-default block mb-px" :class="labelClass">{{label}}</label>
+        <label class="label text-default block mb-px font-medium" :class="labelClass">{{label}}</label>
         <input class="input w-full px-2 py-1 text-base font-medium rounded-md" :type="type" :placeholder="placeholder" :name="name" :disabled="disabled"
             @keypress="isNumber($event)" :maxlength="maxLength">
     </div>

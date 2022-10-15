@@ -10,7 +10,7 @@
                 <base-input type="text" label="Name" placeholder="User's name" class="w-96"/>
                 <div class="flex items-center space-x-5">
                     <div>
-                        <h1>Score</h1>
+                        <h1 class="font-medium">Score</h1>
                         <div class="select w-24 text-black pl-2.5">
                             <select name="" id="">
                                 <option value="all" selected>All</option>
@@ -24,7 +24,7 @@
                     </div>
 
                     <div>
-                        <h1>Comment</h1>
+                        <h1 class="font-medium">Comment</h1>
                         <div class="select w-24 text-black pl-2.5">
                             <select name="" id="">
                                 <option value="all" selected>All</option>

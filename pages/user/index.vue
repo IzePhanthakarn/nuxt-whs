@@ -13,7 +13,7 @@
             </div>
             <div class="ml-auto mr-0 mt-2 flex items-center space-x-5">
                 <div>
-                    <h1>Role</h1>
+                    <h1 class="font-medium">Role</h1>
                     <div class="select w-24 text-black pl-2.5">
                         <select name="" id="">
                             <option value="all" selected>All</option>

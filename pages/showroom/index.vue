@@ -1,7 +1,7 @@
 <template>
     <div class="w-full h-full flex flex-col text-default">
-        <div class="w-full bg-gray4 rounded-xl text-white flex items-center justify-between p-3">
-            <div class="flex items-center space-x-2">
+        <div class="w-full bg-gray4 rounded-xl flex items-center justify-between p-3">
+            <div class="flex items-center text-white space-x-2">
                 <base-icon icon="garage" size="40"></base-icon>
                 <h1 class="text-3xl font-medium">Showroom</h1>
             </div>
@@ -126,7 +126,6 @@ export default {
 
 .register-btn:hover {
     background: none;
-    color: #f5f5f7;
     border: solid 3px var(--teal);
     transform: scale(1.02);
 }

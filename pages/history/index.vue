@@ -13,7 +13,7 @@
             </div>
             <div class="ml-auto mr-0 mt-2 flex items-center space-x-5">
                 <div>
-                    <h1>Trading</h1>
+                    <h1 class="font-medium">Trading</h1>
                     <div class="select w-20 text-black pl-2.5">
                         <select name="" id="">
                             <option value="all" selected>All</option>
@@ -24,7 +24,7 @@
                 </div>
 
                 <div>
-                    <h1>Status</h1>
+                    <h1 class="font-medium">Status</h1>
                     <div class="select w-36 text-black pl-2.5">
                         <select name="" id="">
                             <option value="all" selected>All</option>
@@ -38,7 +38,7 @@
                 </div>
 
                 <div>
-                    <h1>Sort By</h1>
+                    <h1 class="font-medium">Sort By</h1>
                     <div class="select w-44 text-black pl-2.5">
                         <select name="" id="">
                             <option value="lasted" selected>Lasted to Oldest</option>
