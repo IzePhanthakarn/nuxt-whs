@@ -16,7 +16,8 @@
             </nuxt-link>
 
             <!-- Total Cars -->
-            <nuxt-link to="/all_cars" class="border-card cursor-pointer bg-gray3 py-4 rounded-xl flex items-center justify-evenly">
+            <nuxt-link to="/all_cars"
+                class="border-card cursor-pointer bg-gray3 py-4 rounded-xl flex items-center justify-evenly">
                 <base-icon icon="car-sideview" size="80"></base-icon>
                 <div class="flex flex-col text-center">
                     <p class="text-xl font-semibold">7 Cars</p>
@@ -25,7 +26,8 @@
             </nuxt-link>
 
             <!-- Total Showrooms -->
-            <nuxt-link to="/showroom" class="border-card cursor-pointer bg-gray3 py-4 rounded-xl flex items-center justify-evenly">
+            <nuxt-link to="/showroom"
+                class="border-card cursor-pointer bg-gray3 py-4 rounded-xl flex items-center justify-evenly">
                 <base-icon icon="garage" size="70"></base-icon>
                 <div class="flex flex-col text-center">
                     <p class="text-xl font-semibold">4 Showrooms</p>
@@ -34,7 +36,8 @@
             </nuxt-link>
 
             <!-- Total User -->
-            <nuxt-link to="/user" class="border-card cursor-pointer bg-gray3 py-4 rounded-xl flex items-center justify-evenly">
+            <nuxt-link to="/user"
+                class="border-card cursor-pointer bg-gray3 py-4 rounded-xl flex items-center justify-evenly">
                 <base-icon icon="user-square" size="70"></base-icon>
                 <div class="flex flex-col text-center">
                     <p class="text-xl font-semibold">34 Accounts</p>
@@ -43,7 +46,8 @@
             </nuxt-link>
 
             <!-- Total User -->
-            <nuxt-link to="/review" class="border-card cursor-pointer bg-gray3 py-4 rounded-xl flex items-center justify-evenly">
+            <nuxt-link to="/review"
+                class="border-card cursor-pointer bg-gray3 py-4 rounded-xl flex items-center justify-evenly">
                 <base-icon icon="thumbs-updown" size="60"></base-icon>
                 <div class="flex flex-col text-center">
                     <p class="text-xl font-semibold">4.5 / 5</p>
@@ -188,19 +192,23 @@ export default {
 </script>
 
 <style scoped>
-.border-card{
+.border-card {
     border: solid 2px var(--gray3);
 }
-.border-card:hover{
+
+.border-card:hover {
     border: solid 2px var(--pink);
     transition: all .3s;
 }
-.border-card svg{
+
+.border-card svg {
     transition: all .3s;
 }
-.border-card:hover svg{
-    color: red;
+
+.border-card:hover svg {
+    color: var(--pink);
 }
+
 .border-table {
     border: solid 2px var(--pink);
 }
@@ -225,9 +233,18 @@ thead tr {
     display: block;
 }
 
-th,td {
+th,
+td {
     width: 275px;
 }
+
+th {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
 .styled-table thead tr {
     background-color: var(--pink);
     color: #f5f5f7;
@@ -251,12 +268,5 @@ th,td {
 .styled-table tbody tr:nth-of-type(even) {
     background: var(--gray3);
     color: var(--default);
-}
-
-th {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    z-index: 2;
 }
 </style>

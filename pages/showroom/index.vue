@@ -55,18 +55,24 @@ export default {
 </script>
 <style scoped>
 .register-btn {
-    background: var(--green);
+    background: var(--teal);
     color: #f5f5f7;
     box-sizing: border-box;
     padding: 3px 9px;
-    border: solid 3px var(--green);
+    border: solid 3px var(--teal);
     transition: all .2s;
 }
 
 .register-btn:hover {
     background: none;
     color: #f5f5f7;
-    border: solid 3px var(--green);
+    border: solid 3px var(--teal);
     transform: scale(1.02);
+}
+.register-btn svg {
+    transition: all .2s;
+}
+.register-btn:hover svg{
+    color: var(--teal);
 }
 </style>
