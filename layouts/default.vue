@@ -46,6 +46,9 @@
                             <base-icon icon="sun"></base-icon>
                         </div>
                     </div>
+                    <div class="list-ul cursor-pointer h-10 w-10 flex items-center justify-center rounded-full">
+                        <base-icon icon="bell" size="28"></base-icon>
+                    </div>
                     <div class="list-ul cursor-pointer h-12 w-12 flex items-center justify-center rounded-full">
                         <base-icon icon="user"></base-icon>
                     </div>
@@ -55,7 +58,7 @@
 
         <div class="w-full mt-16 flex text-white">
             <div class="sidebar flex flex-col justify-between" :class="{'active':is_open}">
-                <ul :class="{'mt-3':is_open}" v-if="role == 'admin'|| role=='superadmin'">
+                <ul :class="{'mt-3':is_open}" v-if="role == 'admin'">
                     <li>
                         <nuxt-link to="/dashboard" class="menu-list flex items-center rounded-xl m-1 cursor-pointer"
                             :class="{'flex-col justify-center active':!is_open,'highlight': route_name == 'dashboard'}">
@@ -98,7 +101,7 @@
                             <p class="mt-1 text-xs font-medium" :class="{'ml-5 text-base':is_open}">User</p>
                         </nuxt-link>
                     </li>
-                    <li v-if="role == 'superadmin'">
+                    <li>
                         <nuxt-link to="/review" class="menu-list flex items-center rounded-xl m-1 cursor-pointer"
                             :class="{'flex-col justify-center active':!is_open,'highlight': route_name == 'review'}">
                             <base-icon icon="thumbs-updown" size="24" :class="{'ml-5':is_open}"></base-icon>
@@ -106,12 +109,72 @@
                         </nuxt-link>
                     </li>
                 </ul>
+
+                <ul :class="{'mt-3':is_open}" v-if="role == 'seller'">
+                    <li>
+                        <nuxt-link to="/dashboard" class="menu-list flex items-center rounded-xl m-1 cursor-pointer"
+                            :class="{'flex-col justify-center active':!is_open,'highlight': route_name == 'dashboard'}">
+                            <base-icon icon="chart-pie" size="24" :class="{'ml-5':is_open}"></base-icon>
+                            <p class="mt-1 text-xs font-medium" :class="{'ml-5 text-base':is_open}">Dashboard</p>
+                        </nuxt-link>
+                    </li>
+                    <li>
+                        <nuxt-link to="/all_cars" class="menu-list flex items-center rounded-xl m-1 cursor-pointer"
+                            :class="{'flex-col justify-center active':!is_open,'highlight': route_name == 'all_cars'}">
+                            <base-icon icon="car-sideview" size="24" :class="{'ml-5':is_open}"></base-icon>
+                            <p class="mt-1 text-xs font-medium" :class="{'ml-5 text-base':is_open}">All Cars</p>
+                        </nuxt-link>
+                    </li>
+                    <li>
+                        <nuxt-link to="/showroom" class="menu-list flex items-center rounded-xl m-1 cursor-pointer"
+                            :class="{'flex-col justify-center active':!is_open,'highlight': route_name == 'showroom'}">
+                            <base-icon icon="garage" size="24" :class="{'ml-5':is_open}"></base-icon>
+                            <p class="mt-1 text-xs font-medium" :class="{'ml-5 text-base':is_open}">Showroom</p>
+                        </nuxt-link>
+                    </li>
+                    <li>
+                        <nuxt-link to="/garage" class="menu-list flex items-center rounded-xl m-1 cursor-pointer"
+                            :class="{'flex-col justify-center active':!is_open,'highlight': route_name == 'garage'}">
+                            <base-icon icon="directions-car" size="24" :class="{'ml-5':is_open}"></base-icon>
+                            <p class="mt-1 text-xs font-medium" :class="{'ml-5 text-base':is_open}">Garage</p>
+                        </nuxt-link>
+                    </li>
+                    <li>
+                        <nuxt-link to="/dealing" class="menu-list flex items-center rounded-xl m-1 cursor-pointer"
+                            :class="{'flex-col justify-center active':!is_open,'highlight': route_name == 'dealing'}">
+                            <base-icon icon="handshake" size="24" :class="{'ml-5':is_open}"></base-icon>
+                            <p class="mt-1 text-xs font-medium" :class="{'ml-5 text-base':is_open}">Dealing</p>
+                        </nuxt-link>
+                    </li>
+                    <li>
+                        <nuxt-link to="/history" class="menu-list flex items-center rounded-xl m-1 cursor-pointer"
+                            :class="{'flex-col justify-center active':!is_open,'highlight': route_name == 'history'}">
+                            <base-icon icon="clock-rotate-left" size="24" :class="{'ml-5':is_open}"></base-icon>
+                            <p class="mt-1 text-xs font-medium" :class="{'ml-5 text-base':is_open}">History</p>
+                        </nuxt-link>
+                    </li>
+                    <li>
+                        <nuxt-link to="/review" class="menu-list flex items-center rounded-xl m-1 cursor-pointer"
+                            :class="{'flex-col justify-center active':!is_open,'highlight': route_name == 'review'}">
+                            <base-icon icon="thumbs-updown" size="24" :class="{'ml-5':is_open}"></base-icon>
+                            <p class="mt-1 text-xs font-medium" :class="{'ml-5 text-base':is_open}">Review</p>
+                        </nuxt-link>
+                    </li>
+                </ul>
+
                 <ul :class="{'mt-3':is_open}" v-if="role == 'user'">
                     <li>
                         <nuxt-link to="/all_cars" class="menu-list flex items-center rounded-xl m-1 cursor-pointer"
                             :class="{'flex-col justify-center active':!is_open,'highlight': route_name == 'all_cars'}">
                             <base-icon icon="car-sideview" size="24" :class="{'ml-5':is_open}"></base-icon>
                             <p class="mt-1 text-xs font-medium" :class="{'ml-5 text-base':is_open}">All Cars</p>
+                        </nuxt-link>
+                    </li>
+                    <li>
+                        <nuxt-link to="/showroom" class="menu-list flex items-center rounded-xl m-1 cursor-pointer"
+                            :class="{'flex-col justify-center active':!is_open,'highlight': route_name == 'showroom'}">
+                            <base-icon icon="garage" size="24" :class="{'ml-5':is_open}"></base-icon>
+                            <p class="mt-1 text-xs font-medium" :class="{'ml-5 text-base':is_open}">Showroom</p>
                         </nuxt-link>
                     </li>
                     <li>
@@ -136,16 +199,8 @@
                         </nuxt-link>
                     </li>
                 </ul>
+
                 <ul :class="{'mb-3':is_open}">
-                    <li class="flex items-center rounded-xl m-1" :class="{'flex-col justify-center active':!is_open}">
-                        <base-icon icon="account" size="24" v-show="!is_open"></base-icon>
-                        <base-icon icon="account" size="32" class="ml-4" v-show="is_open"></base-icon>
-                        <p class="mt-1 text-xs font-medium capitalize" :class="{'hidden':is_open}">{{role}}</p>
-                        <div class="block ml-3" :class="{'hidden':!is_open}">
-                            <p class="text-base font-medium capitalize">{{role}}</p>
-                            <p class="text-base">{{email}}</p>
-                        </div>
-                    </li>
                     <div class="vertical-line"></div>
                     <li>
                         <nuxt-link to="/setting" class="menu-list flex items-center rounded-xl m-1 cursor-pointer"
@@ -166,7 +221,7 @@ export default {
     data() {
         return {
             is_open: false,
-            role: "superadmin",
+            role: "seller",
             email: "admin@whs.com"
         }
     },

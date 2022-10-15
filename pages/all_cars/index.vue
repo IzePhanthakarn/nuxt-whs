@@ -51,7 +51,7 @@
             </div>
             <!-- Content -->
             <div class="col-span-3 bg-gray3 p-5 rounded-xl">
-                <div class="w-full h-10 flex space-x-3">
+                <div class="w-full h-10 flex">
                     <div v-show="header == 'All Cars'"
                         class="w-10 h-10 bg-gray rounded-full flex items-center justify-center">
                         <base-icon class="text-white" icon="car-sideview" size="36"></base-icon>
@@ -73,7 +73,7 @@
                         <img src="img/logo/Honda.png" alt="" class="w-9">
                     </div>
 
-                    <h1 class="text-3xl font-semibold">{{header}}</h1>
+                    <h1 class="text-3xl font-semibold ml-3">{{header}}</h1>
                 </div>
                 <hr class="border-gray-400 mb-4 mt-3">
                 <div class="w-full flex justify-end space-x-4">
