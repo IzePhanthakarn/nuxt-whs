@@ -23,6 +23,7 @@
                 <base-icon icon="list-ul" size="23"></base-icon>
             </div>
         </div>
+
         <div class="w-full h-full bg-gray3 overflow-y-auto grid grid-cols-4 gap-5 px-5">
             <div class="card bg-gray5 rounded-lg p-4 flex col-span-4 space-x-5" v-for="i in 5" :key="i"
                 :class="{'col-span-1 flex-col space-x-0':!is_list}">
@@ -94,6 +95,7 @@
                 </div>
             </div>
         </div>
+        
         <div class="bg-gray3 p-2.5 rounded-b-xl"></div>
     </div>
 </template>

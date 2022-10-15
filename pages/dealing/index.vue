@@ -11,48 +11,64 @@
                     <table class="styled-table text-black font-semibold text-center">
                         <thead class="text-xl font-normal">
                             <tr>
+                                <th>No.</th>
+                                <th>Trading ID</th>
                                 <th>Car's Name</th>
                                 <th>Trading</th>
                                 <th>Trading with</th>
                                 <th>Status</th>
-                                <th>Latest Update</th>
+                                <th>
+                                    <p class="truncated-lines line-1">Latest Update</p>
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
+                                <td>1</td>
+                                <td>#12345</td>
                                 <td>BMW M8</td>
                                 <td class="text-success">Buy</td>
                                 <td>Waraphon Chuinim</td>
                                 <td class="text-gray">Negotiating..</td>
-                                <td>5 Oct 2022 13:30</td>
+                                <td>5 oct 2022, 13:30</td>
                             </tr>
                             <tr>
+                                <td>2</td>
+                                <td>#12345</td>
                                 <td>Honda NSX</td>
                                 <td class="text-primary">Sell</td>
-                                <td>Phanthakarn Khumphai</td>
+                                <td>
+                                    <p class="truncated-lines line-1">Phanthakarn Khumphai</p>
+                                </td>
                                 <td class="text-orange">Paying..</td>
-                                <td>5 Oct 2022 13:30</td>
+                                <td>5 oct 2022, 13:30</td>
                             </tr>
                             <tr>
+                                <td>3</td>
+                                <td>#12345</td>
                                 <td>Audi R8</td>
                                 <td class="text-success">Buy</td>
                                 <td>Devid Martinez</td>
                                 <td class="text-purple">Sending..</td>
-                                <td>5 Oct 2022 13:30</td>
+                                <td>5 oct 2022, 13:30</td>
                             </tr>
                             <tr>
+                                <td>4</td>
+                                <td>#12345</td>
                                 <td>Honda Civic</td>
                                 <td class="text-primary">Sell</td>
                                 <td>Adam Smasher</td>
                                 <td class="text-success">Success</td>
-                                <td>5 Oct 2022 13:30</td>
+                                <td>5 oct 2022, 13:30</td>
                             </tr>
                             <tr>
+                                <td>5</td>
+                                <td>#12345</td>
                                 <td>Mercedes-AMG GT 53</td>
                                 <td class="text-primary">Sell</td>
                                 <td>Yorinobu Arasaka</td>
                                 <td class="text-primary">Cancel</td>
-                                <td>5 Oct 2022 13:30</td>
+                                <td>5 oct 2022, 13:30</td>
                             </tr>
                         </tbody>
                     </table>

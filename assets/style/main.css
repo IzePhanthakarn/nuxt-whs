@@ -111,15 +111,19 @@
 .text-white {
     color: #f5f5f7;
 }
-.text-gray{
+
+.text-gray {
     color: #8e8e93;
 }
-.text-orange{
+
+.text-orange {
     color: #ff8a4c;
 }
+
 .text-primary {
     color: var(--pink);
 }
+
 .text-purple {
     color: #785dd0;
 }
@@ -131,9 +135,11 @@
 .bg-success {
     background: var(--green);
 }
+
 .text-success {
     color: #00c04b;
 }
+
 .bg-close {
     background: #ff8a4c;
 }
@@ -175,4 +181,62 @@ body {
     font-family: 'Baloo 2', cursive;
     /* color: var(--default); */
     overflow-x: hidden;
+}
+
+
+select {
+    /* Reset Select */
+    appearance: none;
+    outline: 0;
+    border: 0;
+    box-shadow: none;
+    /* Personalize */
+    flex: 1;
+    padding: auto;
+    background-color: #f5f5f7;
+    background-image: none;
+    cursor: pointer;
+}
+
+/* Remove IE arrow */
+select::-ms-expand {
+    display: none;
+}
+
+/* Custom Select wrapper */
+.select {
+    position: relative;
+    display: flex;
+    height: 35px;
+    border-radius: .25em;
+    overflow: hidden;
+    background: #f5f5f7;
+}
+
+/* Arrow */
+.select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: .35em .75em;
+    background-color: var(--gray);
+    color: #f5f5f7;
+    transition: .25s all ease;
+    pointer-events: none;
+}
+
+.select:hover::after {
+    color: var(--pink);
+}
+
+.truncated-lines {
+    width: 100%;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+.line-1{
+    -webkit-line-clamp: 1;
 }

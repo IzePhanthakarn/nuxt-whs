@@ -90,42 +90,42 @@
                                 <tr>
                                     <td>BMW M8</td>
                                     <td>Suphanburi</td>
-                                    <td>5 Oct 2022 13:30</td>
+                                    <td>5 oct 2022, 13:30</td>
                                 </tr>
                                 <tr>
                                     <td>BMW M8</td>
                                     <td>Suphanburi</td>
-                                    <td>5 Oct 2022 13:30</td>
+                                    <td>5 oct 2022, 13:30</td>
                                 </tr>
                                 <tr>
                                     <td>BMW M8</td>
                                     <td>Suphanburi</td>
-                                    <td>5 Oct 2022 13:30</td>
+                                    <td>5 oct 2022, 13:30</td>
                                 </tr>
                                 <tr>
                                     <td>BMW M8</td>
                                     <td>Suphanburi</td>
-                                    <td>5 Oct 2022 13:30</td>
+                                    <td>5 oct 2022, 13:30</td>
                                 </tr>
                                 <tr>
                                     <td>BMW M8</td>
                                     <td>Suphanburi</td>
-                                    <td>5 Oct 2022 13:30</td>
+                                    <td>5 oct 2022, 13:30</td>
                                 </tr>
                                 <tr>
                                     <td>BMW M8</td>
                                     <td>Suphanburi</td>
-                                    <td>5 Oct 2022 13:30</td>
+                                    <td>5 oct 2022, 13:30</td>
                                 </tr>
                                 <tr>
                                     <td>BMW M8</td>
                                     <td>Suphanburi</td>
-                                    <td>5 Oct 2022 13:30</td>
+                                    <td>5 oct 2022, 13:30</td>
                                 </tr>
                                 <tr>
                                     <td>BMW M8</td>
                                     <td>Suphanburi</td>
-                                    <td>5 Oct 2022 13:30</td>
+                                    <td>5 oct 2022, 13:30</td>
                                 </tr>
                             </tbody>
                         </table>
