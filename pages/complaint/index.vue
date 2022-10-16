@@ -178,6 +178,8 @@
     </div>
 </template>
 
+</script>
+
 <style scoped>
 .border-table {
     border: solid 4px #2f2f2f;
