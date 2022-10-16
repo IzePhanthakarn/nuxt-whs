@@ -1,10 +1,23 @@
 <template>
     <div class="w-full h-full flex flex-col text-default">
-
-        <!-- Title -->
-        <div class="w-full bg-gray4 rounded-xl text-white flex items-center p-3 space-x-2">
-            <base-icon icon="car-sideview" size="40"></base-icon>
-            <h1 class="text-3xl font-medium">All Cars</h1>
+        <div class="w-full bg-gray4 rounded-xl flex items-center justify-between p-3">
+            <!-- Title -->
+            <div class="flex items-center text-white space-x-2">
+                <base-icon icon="car-sideview" size="40"></base-icon>
+                <h1 class="text-3xl font-medium">All Cars</h1>
+            </div>
+            <div class="flex items-center space-x-3">
+                <button class="green-btn flex items-center font-medium text-lg rounded-full" @click="forbuy">
+                    <base-icon icon="pricetag-alt" size="24" v-show="!for_buy"></base-icon>
+                    <base-icon icon="car-sideview" size="24" v-show="for_buy"></base-icon>
+                    <p class="ml-2" v-show="!for_buy">For Buy</p>
+                    <p class="ml-2" v-show="for_buy">All Cars</p>
+                </button>
+                <button class="teal-btn flex items-center font-medium text-lg rounded-full space-x-2">
+                    <base-icon icon="data-saver-on" size="24"></base-icon>
+                    <p>Sell Car</p>
+                </button>
+            </div>
         </div>
 
         <!-- Content -->
@@ -131,7 +144,7 @@
                 </div>
                 <hr class="border-gray-400 mb-4 mt-3">
                 <div class="w-full flex justify-between">
-                    <base-input label="Car's name" class="w-96" />
+                    <base-input label="Car's name" class="w-80" placeholder="Car's name" />
                     <div class="flex items-center space-x-3">
                         <div>
                             <h1>Sort By</h1>
@@ -194,6 +207,7 @@ export default {
     data() {
         return {
             header: "All Cars",
+            for_buy: false,
             showroom: null,
             // brands: [
             //     { head: "A", name: ["Aston Martin", "Audi"] },
@@ -352,6 +366,9 @@ export default {
         },
         price(value) {
             return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        },
+        forbuy(){
+            this.for_buy = !this.for_buy
         }
     },
     mounted() {

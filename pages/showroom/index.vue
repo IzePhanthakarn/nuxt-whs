@@ -5,9 +5,9 @@
                 <base-icon icon="garage" size="40"></base-icon>
                 <h1 class="text-3xl font-medium">Showroom</h1>
             </div>
-            <button class="register-btn font-medium text-lg rounded-full">
-                <base-icon icon="app-register" size="24"></base-icon>
-                Register Showroom
+            <button class="teal-btn flex items-center font-medium text-lg rounded-full space-x-2">
+                <base-icon icon="add-home" size="24"></base-icon>
+                <p>Register Showroom</p>
             </button>
         </div>
 
@@ -95,7 +95,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="bg-gray3 p-2.5 rounded-b-xl"></div>
     </div>
 </template>
@@ -115,7 +115,7 @@ export default {
 }
 </script>
 <style scoped>
-.register-btn {
+.teal-btn {
     background: var(--teal);
     color: #f5f5f7;
     box-sizing: border-box;
@@ -124,17 +124,17 @@ export default {
     transition: all .2s;
 }
 
-.register-btn:hover {
+.teal-btn:hover {
     background: none;
     border: solid 3px var(--teal);
     transform: scale(1.02);
 }
 
-.register-btn svg {
+.teal-btn svg {
     transition: all .2s;
 }
 
-.register-btn:hover svg {
+.teal-btn:hover svg {
     color: var(--teal);
 }
 

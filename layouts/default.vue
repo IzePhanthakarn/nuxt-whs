@@ -24,12 +24,9 @@
                             <base-icon icon="magnifying-glass"></base-icon>
                             <p class="mt-0.5">Search</p>
                         </button>
-                        <input class="input w-full pt-2" placeholder="Product" required="" type="text">
+                        <input class="input w-full pt-2" placeholder="Car's name" required="" type="text">
                         <button class="reset" type="reset">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
-                            </svg>
+                            <base-icon icon="x"></base-icon>
                         </button>
                     </form>
                 </div>
@@ -47,6 +44,9 @@
                         </div>
                     </div>
                     <div class="list-ul cursor-pointer h-10 w-10 flex items-center justify-center rounded-full">
+                        <base-icon icon="forum" size="28"></base-icon>
+                    </div>
+                    <div class="list-ul cursor-pointer h-10 w-10 flex items-center justify-center rounded-full">
                         <base-icon icon="bell" size="28"></base-icon>
                     </div>
                     <div class="list-ul cursor-pointer h-12 w-12 flex items-center justify-center rounded-full">
@@ -58,6 +58,8 @@
 
         <div class="w-full mt-16 flex text-white">
             <div class="sidebar flex flex-col justify-between" :class="{'active':is_open}">
+
+                <!-- Admin -->
                 <ul :class="{'mt-3':is_open}" v-if="role == 'admin'">
                     <li>
                         <nuxt-link to="/dashboard" class="menu-list flex items-center rounded-xl m-1 cursor-pointer"
@@ -81,13 +83,6 @@
                         </nuxt-link>
                     </li>
                     <li>
-                        <nuxt-link to="/dealing" class="menu-list flex items-center rounded-xl m-1 cursor-pointer"
-                            :class="{'flex-col justify-center active':!is_open,'highlight': route_name == 'dealing'}">
-                            <base-icon icon="handshake" size="24" :class="{'ml-5':is_open}"></base-icon>
-                            <p class="mt-1 text-xs font-medium" :class="{'ml-5 text-base':is_open}">Dealing</p>
-                        </nuxt-link>
-                    </li>
-                    <li>
                         <nuxt-link to="/history" class="menu-list flex items-center rounded-xl m-1 cursor-pointer"
                             :class="{'flex-col justify-center active':!is_open,'highlight': route_name == 'history'}">
                             <base-icon icon="clock-rotate-left" size="24" :class="{'ml-5':is_open}"></base-icon>
@@ -108,8 +103,16 @@
                             <p class="mt-1 text-xs font-medium" :class="{'ml-5 text-base':is_open}">Review</p>
                         </nuxt-link>
                     </li>
+                    <li>
+                        <nuxt-link to="/complaint" class="menu-list flex items-center rounded-xl m-1 cursor-pointer"
+                            :class="{'flex-col justify-center active':!is_open,'highlight': route_name == 'complaint'}">
+                            <base-icon icon="exclamation-octagon" size="24" :class="{'ml-5':is_open}"></base-icon>
+                            <p class="mt-1 text-xs font-medium" :class="{'ml-5 text-base':is_open}">Complaint</p>
+                        </nuxt-link>
+                    </li>
                 </ul>
 
+                <!-- Seller -->
                 <ul :class="{'mt-3':is_open}" v-if="role == 'seller'">
                     <li>
                         <nuxt-link to="/dashboard" class="menu-list flex items-center rounded-xl m-1 cursor-pointer"
@@ -162,6 +165,7 @@
                     </li>
                 </ul>
 
+                <!-- User -->
                 <ul :class="{'mt-3':is_open}" v-if="role == 'user'">
                     <li>
                         <nuxt-link to="/all_cars" class="menu-list flex items-center rounded-xl m-1 cursor-pointer"
@@ -221,7 +225,7 @@ export default {
     data() {
         return {
             is_open: false,
-            role: "seller",
+            role: "admin",
             email: "admin@whs.com"
         }
     },
@@ -316,7 +320,7 @@ export default {
 .form:before {
     content: "";
     position: absolute;
-    background: var(--pink);
+    background: crimson;
     transform: scaleX(0);
     transform-origin: center;
     width: 100%;
@@ -357,7 +361,7 @@ input:not(:placeholder-shown)~.reset {
 /* sizing svg icons */
 .form svg {
     width: 17px;
-    margin-top: 3px;
+    /* margin-top: 1px; */
 }
 
 .vertical-line {
