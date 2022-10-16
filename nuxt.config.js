@@ -34,6 +34,7 @@ export default {
   plugins: [
     "@/plugins/apex-charts",
     "@/plugins/notification",
+    "@/plugins/tippy",
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

@@ -286,3 +286,12 @@ select::-ms-expand {
 .green-btn:hover svg {
     color: #00c04b;
 }
+
+.v-toast .v-toast__item {
+    border-radius: 5em;
+    z-index: 999;
+}
+
+.tippy-popper{
+    z-index: 99 !important;
+}

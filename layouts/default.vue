@@ -35,10 +35,10 @@
                 <div class="flex items-center space-x-4">
                     <div class="list-ul cursor-pointer h-10 w-10 flex items-center justify-center rounded-full">
                         <div @click="changeMode" v-show="$colorMode.value === 'dark'" class="cursor-pointer">
-                            <base-icon icon="moon"></base-icon>
+                            <base-icon icon="moon" content="Darkmode!" v-tippy></base-icon>
                         </div>
                         <div @click="changeMode" v-show="$colorMode.value === 'light'" class="cursor-pointer">
-                            <base-icon icon="sun"></base-icon>
+                            <base-icon icon="sun" content="Lightmode!" v-tippy></base-icon>
                         </div>
                     </div>
                     <div class="list-ul cursor-pointer h-10 w-10 flex items-center justify-center rounded-full">
