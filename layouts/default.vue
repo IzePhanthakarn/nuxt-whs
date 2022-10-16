@@ -34,12 +34,10 @@
                 <!-- Right side -->
                 <div class="flex items-center space-x-4">
                     <div class="list-ul cursor-pointer h-10 w-10 flex items-center justify-center rounded-full">
-                        <div @click="$colorMode.preference = 'light'" v-show="$colorMode.value === 'dark'"
-                            class="cursor-pointer">
+                        <div @click="changeMode" v-show="$colorMode.value === 'dark'" class="cursor-pointer">
                             <base-icon icon="moon"></base-icon>
                         </div>
-                        <div @click="$colorMode.preference = 'dark'" v-show="$colorMode.value === 'light'"
-                            class="cursor-pointer">
+                        <div @click="changeMode" v-show="$colorMode.value === 'light'" class="cursor-pointer">
                             <base-icon icon="sun"></base-icon>
                         </div>
                     </div>
@@ -59,7 +57,7 @@
         <div class="w-full mt-16 flex text-white">
             <div class="sidebar flex flex-col justify-between" :class="{'active':is_open}">
 
-                <!-- Admin -->
+                <!--//--//--//--//--//--//--//--//--//-- Admin --//--//--//--//--//--//--//--//--//-->
                 <ul :class="{'mt-3':is_open}" v-if="role == 'admin'">
                     <li>
                         <nuxt-link to="/dashboard" class="menu-list flex items-center rounded-xl m-1 cursor-pointer"
@@ -232,6 +230,18 @@ export default {
     methods: {
         toggle() {
             this.is_open = !this.is_open
+        },
+        changeMode() {
+            if (this.$colorMode.value === 'dark') {
+                this.$colorMode.preference = 'light';
+            } else if (this.$colorMode.value === 'light') {
+                this.$colorMode.preference = 'dark';
+            }
+            this.$toast.open({
+                message: 'Have fun with ' + this.$colorMode.preference + 'mode',
+                type: 'default',
+                duration: 1500
+            })
         }
     },
     computed: {
